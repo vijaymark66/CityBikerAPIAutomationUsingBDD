@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>cucumber-jvm-example</td>
+        <td>1</td>
+      <td>23 Jan 2021, 18:17</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">step_def.CityBikeAPIStepDefinition.I_do_Get_request_to_fetch_network_by_valid_networkid()</td>
+              <td>1</td>
+              <td class="duration" data-value="1529000000">1.529</td>
+              <td class="duration" data-value="1529000000">1.529</td>
+              <td class="duration" data-value="1529000000">1.529</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">step_def.CityBikeAPIStepDefinition.I_do_Get_request_to_fetch_the_network_by_invalidnetworkid_endpoint()</td>
+              <td>1</td>
+              <td class="duration" data-value="816000000">0.816</td>
+              <td class="duration" data-value="816000000">0.816</td>
+              <td class="duration" data-value="816000000">0.816</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">step_def.CityBikeAPIStepDefinition.I_do_Get_request_with_field_filters_id_name_href_endpoint()</td>
+              <td>1</td>
+              <td class="duration" data-value="1024000000">1.024</td>
+              <td class="duration" data-value="1024000000">1.024</td>
+              <td class="duration" data-value="1024000000">1.024</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">step_def.CityBikeAPIStepDefinition.I_do_Get_request_with_href_value()</td>
+              <td>1</td>
+              <td class="duration" data-value="1158000000">1.158</td>
+              <td class="duration" data-value="1158000000">1.158</td>
+              <td class="duration" data-value="1158000000">1.158</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">step_def.CityBikeAPIStepDefinition.I_get_the_city_corresponding_latitude_and_longitude()</td>
+              <td>1</td>
+              <td class="duration" data-value="151000000">0.151</td>
+              <td class="duration" data-value="151000000">0.151</td>
+              <td class="duration" data-value="151000000">0.151</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">step_def.CityBikeAPIStepDefinition.I_verify_the_city_Frankfurt_is_in_Germany()</td>
+              <td>1</td>
+              <td class="duration" data-value="1719000000">1.719</td>
+              <td class="duration" data-value="1719000000">1.719</td>
+              <td class="duration" data-value="1719000000">1.719</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">step_def.CityBikeAPIStepDefinition.accept_json_format()</td>
+              <td>5</td>
+              <td class="duration" data-value="219000000">0.219</td>
+              <td class="duration" data-value="219000000">1.080</td>
+              <td class="duration" data-value="1095000000">1.095</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">step_def.CityBikeAPIStepDefinition.i_do_get_request_to_fetch_all_networks_endpoint()</td>
+              <td>1</td>
+              <td class="duration" data-value="3943000000">3.943</td>
+              <td class="duration" data-value="3943000000">3.943</td>
+              <td class="duration" data-value="3943000000">3.943</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">step_def.CityBikeAPIStepDefinition.i_should_see_response_status_code_should_be(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">step_def.CityBikeAPIStepDefinition.response_status_code_should_be(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2750000">0.002</td>
+              <td class="duration" data-value="2750000">0.009</td>
+              <td class="duration" data-value="11000000">0.011</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>10</td>
+            <td>17</td>
+            <td class="duration">0.673</td>
+            <td class="duration">3.943</td>
+            <td class="duration">11.447</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

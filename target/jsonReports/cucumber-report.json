@@ -1,0 +1,301 @@
+[
+  {
+    "line": 20,
+    "elements": [
+      {
+        "start_timestamp": "2021-01-23T12:46:42.103Z",
+        "line": 22,
+        "name": "Fetch all the networks which returns the exact location of city bikes around the world with json format",
+        "description": "",
+        "id": "citybike-api;fetch-all-the-networks-which-returns-the-exact-location-of-city-bikes-around-the-world-with-json-format",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1080000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "accept json format",
+            "match": {
+              "location": "step_def.CityBikeAPIStepDefinition.accept_json_format()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3943000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I do Get request to fetch all networks endpoint",
+            "match": {
+              "location": "step_def.CityBikeAPIStepDefinition.i_do_get_request_to_fetch_all_networks_endpoint()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 9000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "response status code should be \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 31
+                }
+              ],
+              "location": "step_def.CityBikeAPIStepDefinition.response_status_code_should_be(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-23T12:46:47.461Z",
+        "line": 27,
+        "name": "verify that the city Frankfurt is in Germany and return the city�s corresponding latitude and longitude.",
+        "description": "",
+        "id": "citybike-api;verify-that-the-city-frankfurt-is-in-germany-and-return-the-city�s-corresponding-latitude-and-longitude.",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "accept json format",
+            "match": {
+              "location": "step_def.CityBikeAPIStepDefinition.accept_json_format()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1158000000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I do Get request with href value",
+            "match": {
+              "location": "step_def.CityBikeAPIStepDefinition.I_do_Get_request_with_href_value()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "i should see response status code should be \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 44
+                }
+              ],
+              "location": "step_def.CityBikeAPIStepDefinition.i_should_see_response_status_code_should_be(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1719000000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I verify the city Frankfurt is in Germany",
+            "match": {
+              "location": "step_def.CityBikeAPIStepDefinition.I_verify_the_city_Frankfurt_is_in_Germany()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 151000000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I get the city corresponding latitude and longitude",
+            "match": {
+              "location": "step_def.CityBikeAPIStepDefinition.I_get_the_city_corresponding_latitude_and_longitude()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-23T12:46:50.532Z",
+        "line": 34,
+        "name": "Fetch the network by valid netwrok id",
+        "description": "",
+        "id": "citybike-api;fetch-the-network-by-valid-netwrok-id",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "accept json format",
+            "match": {
+              "location": "step_def.CityBikeAPIStepDefinition.accept_json_format()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1529000000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I do Get request to fetch network by valid networkid",
+            "match": {
+              "location": "step_def.CityBikeAPIStepDefinition.I_do_Get_request_to_fetch_network_by_valid_networkid()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "response status code should be \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 31
+                }
+              ],
+              "location": "step_def.CityBikeAPIStepDefinition.response_status_code_should_be(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-23T12:46:52.078Z",
+        "line": 39,
+        "name": "Fetch the network by invalidnetwrok id",
+        "description": "",
+        "id": "citybike-api;fetch-the-network-by-invalidnetwrok-id",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "accept json format",
+            "match": {
+              "location": "step_def.CityBikeAPIStepDefinition.accept_json_format()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 816000000,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "I do Get request to fetch the network by invalidnetworkid endpoint",
+            "match": {
+              "location": "step_def.CityBikeAPIStepDefinition.I_do_Get_request_to_fetch_the_network_by_invalidnetworkid_endpoint()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "response status code should be \"404\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"404\"",
+                  "offset": 31
+                }
+              ],
+              "location": "step_def.CityBikeAPIStepDefinition.response_status_code_should_be(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-23T12:46:52.926Z",
+        "line": 45,
+        "name": "Validate the field filtering endpoint by id,name,href",
+        "description": "",
+        "id": "citybike-api;validate-the-field-filtering-endpoint-by-id-name-href",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "accept json format",
+            "match": {
+              "location": "step_def.CityBikeAPIStepDefinition.accept_json_format()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1024000000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "I do Get request with field filters id,name,href endpoint",
+            "match": {
+              "location": "step_def.CityBikeAPIStepDefinition.I_do_Get_request_with_field_filters_id_name_href_endpoint()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "response status code should be \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 31
+                }
+              ],
+              "location": "step_def.CityBikeAPIStepDefinition.response_status_code_should_be(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "CityBike API",
+    "description": "",
+    "id": "citybike-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Feature/CityBike.feature",
+    "tags": []
+  }
+]
